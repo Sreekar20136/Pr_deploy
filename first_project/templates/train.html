@@ -1,0 +1,5 @@
+<form method="post" action="{% url 'train' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="dataset">
+    <button type="submit">Train</button>
+</form>
