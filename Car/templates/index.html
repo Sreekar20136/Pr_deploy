@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Predict Your Car Price </title>
+    <div style="background-image: url('https://1920x1080hdwallpapers.com/image/201503/cars/1243/chevrolet-old-school-car-beach.jpg');"></div>
+
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173973815-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-173973815-2');
+</script>
+
+    
+    
+    
+    </head>
+
+<body>
+    
+    
+     
+
+    
+
+    <div style="color:#f70404">
+        <form action = "prediction" method="post">{% csrf_token %}
+            <h1>Welcome To The Old  Car Price Predictor</h1><br>
+            <p>------> Enter the details below to get the exact price of the car <------</p><br>
+            <h4>Showroom Released Year</h4><br><input id="first" name="Year" type="number ">
+            <br><br><br><h4>What is the Showroom Price?(In lakhs)</h4><br><input id="second" name="Present_Price" required="required">
+            <br><br><br><h4>How Many Kilometers Drived?</h4><br><input id="third" name="Kms_Driven" required="required">
+            <br><br><br><h4>How much owners previously had the car(0 or 1 or 2) ?</h4><br><input id="fourth" name="Owner" required="required">
+            <br><br><br><h4>What Is the Fuel type?</h4><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select>
+            <br><br><br><h4>Are you A Dealer or Individual</h4><br><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+            <br><br><br><h4>Transmission type</h4><br><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            <br><br><br>
+          <button type="submit" class="btn btn-success">Calculate Price</button>
+            <br>
+        </form>
+
+
+    </div>
+
+
+
+
+    <style>
+        body {
+            background:url('https://1920x1080hdwallpapers.com/image/201503/cars/1243/chevrolet-old-school-car-beach.jpg');
+            text-align: center;
+            padding: 0px;
+        }
+        
+        
+        .navbar {
+    background-color: #333333;
+}
+
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #fuel:hover {
+            background-color: coral;
+        }
+
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: coral;
+        }
+
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: coral;
+        }
+
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: darkcyan;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+
+    <br><br><p>This is one of the most accurate real world project created by <b>Anshuman Gupta</b> </p><br>
+    <p>Copywrite @ carpriceprediction2020</p>
+</body>
+
+</html>
